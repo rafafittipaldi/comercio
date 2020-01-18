@@ -14,6 +14,56 @@
 		<jsp:forward page="../login.jsp"></jsp:forward>
 	</c:if>
 	
-	home
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-10">
+				
+				<div class="row pt-4">
+				  <div class="col-sm-4">
+				    <div class="card">
+				      <div class="card-body">
+				        <h5 class="card-title">Minhas Compras</h5>
+				        <p class="card-text text-center">
+				        	<img alt="Compras" 
+				        		width="200px"  
+				        		src="${pageContext.request.contextPath}/img/cart.png">
+				        </p>
+				        <a href="#" class="btn btn-success">Go somewhere</a>
+				      </div>
+				    </div>
+				  </div>
+				  
+				  <div class="col-sm-4">
+				    <div class="card">
+				      <div class="card-body">
+				        <h5 class="card-title">Gestão de Produtos</h5>
+				        <p class="card-text text-center">
+				        	<img alt="Produtos" 
+				        		width="200px" 
+				        		src="${pageContext.request.contextPath}/img/product.png">
+				        </p>
+				        <a href="#" class="btn btn-success">Go somewhere</a>
+				      </div>
+				    </div>
+				  </div>
+				  
+				  <div class="col-sm-4">
+				    <div class="card">
+				      <div class="card-body">
+				        <h5 class="card-title">Gestão de Usuários</h5>
+				        <p class="card-text text-center">
+				        	<img alt="Usuários" 
+				        		width="200px" 
+				        		src="${pageContext.request.contextPath}/img/user.png">
+				        </p>
+				        <a href="#" class="btn btn-success">Go somewhere</a>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
 </body>
 </html>
