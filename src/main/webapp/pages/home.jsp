@@ -28,7 +28,7 @@
 				        		width="200px"  
 				        		src="${pageContext.request.contextPath}/img/cart.png">
 				        </p>
-				        <a href="#" class="btn btn-success">Go somewhere</a>
+				        <a href="<c:url value='/ComprasSrv' />" class="btn btn-success">Visitar</a>
 				      </div>
 				    </div>
 				  </div>
@@ -42,7 +42,7 @@
 				        		width="200px" 
 				        		src="${pageContext.request.contextPath}/img/product.png">
 				        </p>
-				        <a href="#" class="btn btn-success">Go somewhere</a>
+				        <a href="<c:url value='/ProdutosSrv' />" class="btn btn-success">Visitar</a>
 				      </div>
 				    </div>
 				  </div>
@@ -56,7 +56,7 @@
 				        		width="200px" 
 				        		src="${pageContext.request.contextPath}/img/user.png">
 				        </p>
-				        <a href="#" class="btn btn-success">Go somewhere</a>
+				        <a href="<c:url value='/UsuariosSrv' />" class="btn btn-success">Visitar</a>
 				      </div>
 				    </div>
 				  </div>
