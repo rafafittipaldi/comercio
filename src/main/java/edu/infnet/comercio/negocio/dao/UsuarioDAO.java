@@ -56,7 +56,7 @@ public class UsuarioDAO {
 				return new Usuario(id, _login, senha);
 			}
 		} catch (Exception e) {
-			// TODO: handle exception
+			e.printStackTrace();
 		}
 		return null;
 	}
