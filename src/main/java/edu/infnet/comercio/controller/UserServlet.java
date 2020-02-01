@@ -56,14 +56,13 @@ public class UserServlet extends HttpServlet {
 			
 			usuarioService.save(usuario);
 		} else {
-			if(usuarioService.validarusuario(login, senha)) {
+			if(usuarioService.validarUsuario(login, senha)) {
 				req.getSession().setAttribute("user", login);
 			} else {
 				req.setAttribute("error", "Login ou senha inválidos!");
 			}
 		}
-		
-		req.getSession().setAttribute("user", login);
+
 		req.getRequestDispatcher("pages/home.jsp")
 			.forward(req, resp);
 	}

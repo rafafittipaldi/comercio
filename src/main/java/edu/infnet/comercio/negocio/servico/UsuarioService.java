@@ -13,7 +13,7 @@ public class UsuarioService {
 		dao = new UsuarioDAO();
 	}
 	
-	public Boolean validarusuario(String login, String senha) {
+	public Boolean validarUsuario(String login, String senha) {
 		
 		Usuario usuario = dao.getByLogin(login);
 		
