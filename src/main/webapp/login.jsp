@@ -34,6 +34,12 @@
 					</div>
 					<button type="submit" class="btn btn-success">Continuar</button>
 				</form>
+				
+				<div class="align-items-center">
+					<a href="<c:url value='/logon.jsp' />" class="badge badge-light mt-4">
+					   Clique aqui para novo cadastro
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>

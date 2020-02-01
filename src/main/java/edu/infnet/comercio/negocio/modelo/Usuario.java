@@ -11,8 +11,12 @@ public class Usuario {
 	public Usuario() {}
 
 	public Usuario(Integer id, String login, String senha) {
-		super();
 		this.id = id;
+		this.login = login;
+		this.senha = senha;
+	}
+
+	public Usuario(String login, String senha) {
 		this.login = login;
 		this.senha = senha;
 	}

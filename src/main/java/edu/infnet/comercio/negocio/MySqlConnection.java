@@ -3,7 +3,12 @@ package edu.infnet.comercio.negocio;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class MySqlConnection {
+	
+	private static Logger logger  = LogManager.getLogger(MySqlConnection.class);
 	
 	private static Connection con;
 	
@@ -24,11 +29,12 @@ public class MySqlConnection {
 				Class.forName("com.mysql.cj.jdbc.Driver");
 				
 				con = DriverManager.getConnection(url, user, pass);
-				System.out.println("Database iniciou");
+				logger.info("Banco iniciou");
+				return con;
 			} catch (Exception e) {
-				e.printStackTrace();
+				logger.error("Erro ao obter conexao", e);
+				throw new RuntimeException("Erro ao obter conexao", e);
 			}
-					
 		}
 		return con;
 	}
