@@ -25,7 +25,7 @@ insert into usuario (login, senha)
 
 insert into produto (foto, nome, descricao, preco)
 	values(
-		'iphone.jpeg',
+		'iphone.png',
         'Iphone',
         'Design inovador, totalmente em vidro. A câmera que o mundo inteiro adora, ainda melhor. O chip mais poderoso e inteligente em qualquer smartphone. Recarga sem fio simples de verdade.',
         3099.00

@@ -36,7 +36,7 @@ public class ProdutoDAO {
 			while(rs.next()) {
 				Produto produto = new Produto();
 				
-				produto.setId       (rs.getInt("id"));
+				produto.setId       (rs.getInt   ("id"));
 				produto.setDescricao(rs.getString("descricao"));
 				produto.setFoto     (rs.getString("foto"));
 				produto.setNome     (rs.getString("nome"));
@@ -44,9 +44,10 @@ public class ProdutoDAO {
 				
 				listProduto.add(produto);
 			}
+			
 		} catch (Exception e) {
 			logger.error("Erro ao recuperar produtos!", e);
 		}
-		return null;
+		return listProduto;
 	}
 }
