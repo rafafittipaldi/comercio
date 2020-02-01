@@ -5,10 +5,15 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import edu.infnet.comercio.negocio.MySqlConnection;
 import edu.infnet.comercio.negocio.modelo.Usuario;
 
 public class UsuarioDAO {
+	
+	private static Logger logger  = LogManager.getLogger(UsuarioDAO.class);
 	
 	private Connection        con;
 	private PreparedStatement pstm;
@@ -30,9 +35,8 @@ public class UsuarioDAO {
 			
 			pstm.execute();
 			pstm.close();
-			
 		} catch (SQLException e) {
-			e.printStackTrace();
+			logger.error("Erro ao salvar usuário!", e);
 		}
 		
 		return false;
@@ -56,7 +60,7 @@ public class UsuarioDAO {
 				return new Usuario(id, _login, senha);
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
+			logger.error("Erro ao buscar usuário!", e);
 		}
 		return null;
 	}
