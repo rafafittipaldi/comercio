@@ -13,9 +13,8 @@ import org.apache.logging.log4j.Logger;
 
 import com.mysql.cj.util.StringUtils;
 
-import edu.infnet.comercio.negocio.MySqlConnection;
-import edu.infnet.comercio.negocio.dao.UsuarioDAO;
 import edu.infnet.comercio.negocio.modelo.Usuario;
+import edu.infnet.comercio.negocio.servico.UsuarioService;
 
 @WebServlet(urlPatterns = {"/UserSrv"})
 public class UserServlet extends HttpServlet {
@@ -24,10 +23,10 @@ public class UserServlet extends HttpServlet {
 	
 	private static final long serialVersionUID = -8541293463576430759L;
 	
-	private UsuarioDAO dao;
+	private UsuarioService usuarioService;
 	
 	public UserServlet() {
-		dao = new UsuarioDAO();
+		usuarioService = new UsuarioService();
 	}
 
 	@Override
@@ -52,16 +51,17 @@ public class UserServlet extends HttpServlet {
 			if(StringUtils.isEmptyOrWhitespaceOnly(senha)) {
 				
 			}
-			
-			//TODO CONVERTER OS VALORES
-			//TODO APLICAR AO MODELO
+
 			Usuario usuario = new Usuario(login, senha);
 			
-			dao.save(usuario);
+			usuarioService.save(usuario);
+		} else {
+			if(usuarioService.validarusuario(login, senha)) {
+				req.getSession().setAttribute("user", login);
+			} else {
+				req.setAttribute("error", "Login ou senha inválidos!");
+			}
 		}
-		
-		System.out.println(" O Login foi " + login);
-		System.out.println(" A Senha foi " + senha);
 		
 		req.getSession().setAttribute("user", login);
 		req.getRequestDispatcher("pages/home.jsp")

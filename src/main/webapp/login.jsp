@@ -17,6 +17,8 @@
 					Fazer Login
 				</h4>
 				
+				${requestScope.error}
+				
 				<form action="<c:url value='/UserSrv' />" method="post">
 					<div class="form-group">
 						<input

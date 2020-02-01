@@ -10,9 +10,9 @@ import edu.infnet.comercio.negocio.modelo.Usuario;
 
 public class UsuarioDAO {
 	
-	private Connection con;
+	private Connection        con;
 	private PreparedStatement pstm;
-	private ResultSet rs;
+	private ResultSet         rs;
 	
 	public UsuarioDAO() {
 		this.con = MySqlConnection.getConnection();
