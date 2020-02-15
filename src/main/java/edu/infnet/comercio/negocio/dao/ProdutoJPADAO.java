@@ -16,7 +16,7 @@ public class ProdutoJPADAO {
 	}
 	
 	public List<Produto> findAll() {
-		return this.em.createQuery("select p from Produto p").getResultList();
+		return this.em.createQuery("select p from Produto p", Produto.class).getResultList();
 	}	
 	
 	public Produto find(Integer id) {
