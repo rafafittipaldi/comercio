@@ -8,7 +8,7 @@ drop table if exists usuario;
 
 create table produto (
 	id int not null primary key auto_increment,
-    foto varchar(80),
+    foto blob(100000),
     nome varchar(80),
     descricao varchar(255),
     preco double(10,2)
