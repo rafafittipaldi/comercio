@@ -1,7 +1,10 @@
+drop database if exists comercio;
+create database comercio;
+
 use comercio;
 
-drop table produto;
-drop table usuario;
+drop table if exists produto;
+drop table if exists usuario;
 
 create table produto (
 	id int not null primary key auto_increment,
