@@ -15,7 +15,7 @@ public class JpaDAO<T, ID> {
 	}
 	
 	public List<T> findAll() {
-		return this.em.createQuery("select p from Produto p", clazz).getResultList();
+		return this.em.createQuery("from " + clazz.getName(), clazz).getResultList();
 	}	
 	
 	public T find(ID id) {

@@ -17,11 +17,9 @@ public class ComprasServlet extends HttpServlet {
 	
 	private static final long serialVersionUID = -556376068832777121L;
 	
-	//private ProdutoDAO dao;
 	private ProdutoJPADAO prdJpaDao;
 	
 	public ComprasServlet() {
-		//this.dao       = new ProdutoDAO();
 		this.prdJpaDao = new ProdutoJPADAO();
 	}
 
