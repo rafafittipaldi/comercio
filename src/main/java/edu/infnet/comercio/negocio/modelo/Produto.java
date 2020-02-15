@@ -1,6 +1,9 @@
 package edu.infnet.comercio.negocio.modelo;
 
+<<<<<<< HEAD
 import javax.persistence.Column;
+=======
+>>>>>>> branch 'master' of https://github.com/rafafittipaldi/comercio.git
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
