@@ -4,24 +4,24 @@
              http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
              version="2.1">
 
-    <persistence-unit name="CRM-MySql-Conn-Comercio">
+    <persistence-unit name="CRM-MySql-Comercio">
         <description>
             Persistence unit for Hibernate - MySql - Comercio
         </description>
 
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
-        <class>org.hibernate.documentation.userguide.Document</class>
+        <class>edu.infnet.comercio.negocio.modelo.Produto</class>
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
 
 			<property name="javax.persistence.jdbc.url"
-				value="jdbc:mysql://localhost:3306/comercio?useTimezone=true&serverTimezone=UTC&createDatabaseIfNotExist=true" />
+				value="jdbc:mysql://localhost:3306/comercio?useTimezone=true&amp;serverTimezone=UTC&amp;createDatabaseIfNotExist=true" />
 
             <property name="javax.persistence.jdbc.user"     value="root" />
             <property name="javax.persistence.jdbc.password" value="" />
-            <property name="hibernate.show_sql"              value="true" />
+            <property name="hibernate.format_sql"            value="true" />
             <property name="hibernate.hbm2ddl.auto"          value="update" />
         </properties>
 
