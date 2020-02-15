@@ -1,17 +1,32 @@
 package edu.infnet.comercio.negocio.modelo;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Produto {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 	
+	@Column(name = "foto")
 	private String foto;
 	
+	@Column(name = "nome")
 	private String nome;
 	
+	@Column(name = "descricao")
 	private String descricao;
 	
+	@Column(name = "preco")
 	private Double preco;
 	
+	//ctrl espaco enter (Construtor Vazio)
+	//ctrl 3 gcuf e ggas
 	public Produto() {}
 
 	public Produto(Integer id, String foto, String nome, String descricao, Double preco) {
