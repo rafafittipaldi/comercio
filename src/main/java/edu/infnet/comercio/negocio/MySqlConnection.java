@@ -23,7 +23,7 @@ public class MySqlConnection {
 					+ "&createDatabaseIfNotExist=true";
 			
 			String user = "root";
-			String pass = "";
+			String pass = "root";
 			
 			try {
 				Class.forName("com.mysql.cj.jdbc.Driver");
